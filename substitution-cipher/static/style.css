@@ -1,0 +1,90 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 420px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.buttons {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button + button {
+    margin-left: 10px;
+}
+
+button[name="reset"] {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.error {
+    color: red;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.result {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    font-weight: 500;
+}
+
+textarea:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 24px 0;
+}
