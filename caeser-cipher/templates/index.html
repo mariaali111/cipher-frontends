@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Caeser Cipher</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Caeser Cipher</h1>
+            
+            <form method="POST">
+                <label>Key</label>
+                <input
+                    type="text"
+                    name="key"
+                    placeholder="Enter a numeric key"
+                    value="{{ key or '' }}"
+                >
+
+                <label>Plaintext</label>
+                <textarea
+                    name="plaintext"
+                    rows="4"
+                    placeholder="Enter plaintext message here..."
+                >{{ plaintext or '' }}</textarea>
+
+                <div class="buttons">
+                    <button type="submit">Encrypt</button>
+                    <button type="submit" name="reset" value="1">Reset</button>
+                </div>
+            </form>
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+
+            <hr>
+
+            <label>Ciphertext</label>
+            <textarea
+                class="result"
+                rows="4"
+                readonly
+                {% if not ciphertext %}disabled{% endif %}
+            >{{ ciphertext or "" }}</textarea>
+        </div>
+    </body>
+</html>
